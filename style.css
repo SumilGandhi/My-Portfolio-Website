@@ -26,3 +26,32 @@ footer {
   background-color: #222;
   color: #fff;
 }
+.about-container {
+  display: flex;           /* Align text and image side by side */
+  justify-content: space-between;
+  align-items: flex-start; /* Align image at top */
+  flex-wrap: wrap;         /* For responsiveness on smaller screens */
+  gap: 20px;               /* Space between text and image */
+}
+
+.about-text {
+  flex: 1;                 /* Take remaining space for text */
+  min-width: 250px;        /* Prevent text from getting too small */
+}
+
+.about-image img {
+  width: 150px;             /* Set image size */
+  height: 150px;
+  border-radius: 50%;       /* Circle */
+  border: 3px solid #333;   /* Optional border */
+}
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center;    /* Center align */
+  }
+  .about-image img {
+    width: 120px;           /* Smaller image on small screens */
+    height: 120px;
+  }
+}
